@@ -63,33 +63,33 @@ const CCCComplianceCard = () => {
             <tbody className="divide-y divide-brand-mid/10 text-white/80">
               <tr className="hover:bg-brand-mid/5 transition-colors">
                 <td className="py-3 px-4 font-medium">Cybersecurity Governance</td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20"><CheckCircle size={12}/> Completed</span></td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20"><FileText size={12}/> Evidence Ready</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20"><CheckCircle size={12} /> Completed</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20"><FileText size={12} /> Evidence Ready</span></td>
               </tr>
               <tr className="hover:bg-brand-mid/5 transition-colors">
                 <td className="py-3 px-4 font-medium">Policies and Procedures</td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20"><CheckCircle size={12}/> Completed</span></td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20"><FileText size={12}/> Evidence Ready</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20"><CheckCircle size={12} /> Completed</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20"><FileText size={12} /> Evidence Ready</span></td>
               </tr>
               <tr className="hover:bg-brand-mid/5 transition-colors">
                 <td className="py-3 px-4 font-medium">Identity and Access Management</td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-light/10 text-brand-light border border-brand-light/20"><CheckCircle size={12}/> Implemented</span></td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20"><Search size={12}/> Available</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-light/10 text-brand-light border border-brand-light/20"><CheckCircle size={12} /> Implemented</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20"><Search size={12} /> Available</span></td>
               </tr>
               <tr className="hover:bg-brand-mid/5 transition-colors">
                 <td className="py-3 px-4 font-medium">Asset Management</td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-400 border border-yellow-500/20"><AlertCircle size={12}/> Reviewed</span></td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20"><Search size={12}/> Available</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-400 border border-yellow-500/20"><AlertCircle size={12} /> Reviewed</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20"><Search size={12} /> Available</span></td>
               </tr>
               <tr className="hover:bg-brand-mid/5 transition-colors">
                 <td className="py-3 px-4 font-medium">Incident Response</td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-light/10 text-brand-light border border-brand-light/20"><CheckCircle size={12}/> Implemented</span></td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20"><FileText size={12}/> Evidence Ready</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-light/10 text-brand-light border border-brand-light/20"><CheckCircle size={12} /> Implemented</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20"><FileText size={12} /> Evidence Ready</span></td>
               </tr>
               <tr className="hover:bg-brand-mid/5 transition-colors">
                 <td className="py-3 px-4 font-medium">Business Continuity</td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-400 border border-yellow-500/20"><AlertCircle size={12}/> Reviewed</span></td>
-                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-gray-500/10 text-gray-400 border border-gray-500/20"><FileText size={12}/> Prepared</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-400 border border-yellow-500/20"><AlertCircle size={12} /> Reviewed</span></td>
+                <td className="py-3 px-4"><span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-gray-500/10 text-gray-400 border border-gray-500/20"><FileText size={12} /> Prepared</span></td>
               </tr>
             </tbody>
           </table>

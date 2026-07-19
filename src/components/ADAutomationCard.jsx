@@ -37,14 +37,14 @@ const ADAutomationCard = () => {
             <h4 className="text-brand-light font-medium uppercase tracking-wider text-xs">Provisioning Details</h4>
             <span className="px-2.5 py-1 bg-brand-base/20 text-brand-light border border-brand-mid/30 rounded text-xs">ID: REQ-8942</span>
           </div>
-          
+
           <div className="bg-brand-darkest border border-brand-mid/20 rounded-lg p-5">
             <div className="flex items-center gap-4 mb-6 pb-6 border-b border-brand-mid/20">
               <div className="w-16 h-16 rounded-full bg-brand-mid/20 flex items-center justify-center border border-brand-mid/40">
                 <User size={32} className="text-brand-light" />
               </div>
               <div>
-                <h5 className="text-white text-lg font-medium">Sarah Jenkins</h5>
+                <h5 className="text-white text-lg font-medium">Shinaj Ahammed</h5>
                 <p className="text-white/50 text-sm">New Employee Onboarding</p>
               </div>
               <div className="ml-auto">
@@ -65,11 +65,11 @@ const ADAutomationCard = () => {
               </div>
               <div>
                 <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Manager</p>
-                <p className="text-white/90">Michael Scott</p>
+                <p className="text-white/90">Mazid Mohammed</p>
               </div>
               <div>
                 <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Username</p>
-                <p className="text-brand-light font-mono">s.jenkins</p>
+                <p className="text-brand-light font-mono">shinaj</p>
               </div>
               <div className="col-span-2">
                 <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Assigned Organisational Unit</p>
@@ -103,7 +103,7 @@ const ADAutomationCard = () => {
 
             <div className="flex-1 overflow-hidden relative">
               <div className="absolute top-2 bottom-2 left-[11px] w-[2px] bg-brand-mid/20"></div>
-              
+
               <div className="space-y-4 relative">
                 {logs.map((log, i) => (
                   <div key={i} className="flex items-start gap-4">
