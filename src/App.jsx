@@ -51,7 +51,7 @@ const App = () => {
       const drawFooter = () => {
         pdf.setFontSize(7.5)
         pdf.setTextColor(89, 182, 173)
-        pdf.text('Nama & Injaz - Work Report - 2026 April', A4_W / 2, FOOTER_Y, { align: 'center' })
+        pdf.text('Nama & Injaz - Work Report - 2026 July', A4_W / 2, FOOTER_Y, { align: 'center' })
         pdf.setTextColor(110, 155, 148)
         pdf.text(String(pageNum), A4_W - MARGIN, FOOTER_Y, { align: 'right' })
       }
@@ -169,7 +169,7 @@ const App = () => {
 
       pdf.setFontSize(8.5)
       pdf.setTextColor(120, 160, 155)
-      pdf.text('Work Report - 2026 April', A4_W / 2, 163, { align: 'center' })
+      pdf.text('Work Report - 2026 July', A4_W / 2, 163, { align: 'center' })
 
       // Bottom separator line
       pdf.setDrawColor(47, 138, 129)
@@ -181,7 +181,7 @@ const App = () => {
       // Cover page footer text
       pdf.setFontSize(7.5)
       pdf.setTextColor(80, 115, 110)
-      pdf.text('Nama & Injaz - Work Report - 2026 April', A4_W / 2, A4_H - 14, { align: 'center' })
+      pdf.text('Nama & Injaz - Work Report - 2026 July', A4_W / 2, A4_H - 14, { align: 'center' })
       pdf.text('Confidential', A4_W - MARGIN, A4_H - 14, { align: 'right' })
 
       /* ════════════════════════════════════════════════

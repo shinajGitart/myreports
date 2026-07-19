@@ -210,13 +210,13 @@ body {
 }
 
 .timeline-dot {
-  width: 48px;
-  height: 48px;
+  width: clamp(48px, 4vw, 64px);
+  height: clamp(48px, 4vw, 64px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.82rem;
+  font-size: clamp(14px, 1.2vw, 18px);
   font-weight: 700;
   color: #fff;
   flex-shrink: 0;
@@ -242,11 +242,27 @@ body {
   box-shadow: 0 0 28px rgba(89,182,173,0.2);
 }
 
+.image-wrapper {
+  width: 100%;
+  min-height: 340px;
+  height: clamp(340px, 27vw, 460px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
 /* ─────────────────────────────────────
    HERO LOGO
 ───────────────────────────────────── */
 .hero-logo {
-  height: 70px;
+  height: clamp(70px, 8vw, 110px);
   width: auto;
   max-width: 220px;
   object-fit: contain;
@@ -258,7 +274,7 @@ body {
    NAVBAR LOGO
 ───────────────────────────────────── */
 .nav-logo-img {
-  height: 44px;
+  height: clamp(40px, 4vw, 60px);
   width: auto;
   max-width: 140px;
   object-fit: contain;
@@ -316,7 +332,7 @@ body {
   right: 0;
   z-index: 1000;
   padding: 0 2rem;
-  height: 68px;
+  height: clamp(70px, 6vw, 90px);
   display: flex;
   align-items: center;
   justify-content: space-between;

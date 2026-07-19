@@ -2,106 +2,96 @@ import React from 'react'
 import { motion, useInView } from 'framer-motion'
 import { CheckCircle, Clock } from 'lucide-react'
 import WorkCard from './WorkCard'
-import EmailSecurityCard from './EmailSecurityCard'
+import CCCComplianceCard from './CCCComplianceCard'
+import ADAutomationCard from './ADAutomationCard'
+import HaseenCard from './HaseenCard'
 
 /* ── Completed works data ── */
 const COMPLETED_WORKS = [
   {
-    title: 'Internal Security Dynamic Architecture',
+    title: 'CCC Certification Project for SBC and FABCO',
     description:
-      'Developed an interactive infrastructure visualization system that maps the entire internal network using a dynamic tree topology, built with D3.js. The tool gives the team a live, interactive view of how systems, services, and infrastructure components connect to each other. During incidents or security investigations, this makes it much faster to pinpoint affected areas, trace dependency paths, and understand how far an issue has spread.',
+      'Managed and supported the Cybersecurity Compliance Certification project for SBC and FABCO. The work included reviewing the organisations\' existing cybersecurity controls, identifying compliance gaps, preparing and updating the required policies and forms, implementing technical security configurations, and collecting supporting evidence for the audit process. The project was coordinated with the relevant teams and auditor to improve both companies\' readiness for CCC certification.',
     benefits: [
-      'Clear visibility into internal infrastructure connections',
-      'Faster incident investigation and root cause analysis',
-      'Supports threat modelling and infrastructure mapping',
-      'Helps trace affected areas during cyber attacks',
-      'Improves defensive planning and security awareness',
+      'Improved cybersecurity compliance readiness for SBC and FABCO',
+      'Identified and addressed gaps in existing security controls',
+      'Standardised cybersecurity policies, procedures, and forms',
+      'Created clear audit evidence and implementation records',
+      'Strengthened security governance across both organisations',
     ],
-    images: ['/archi.png', '/archi1.png'],
+    customContent: <CCCComplianceCard />,
   },
   {
-    title: 'Internal Company Team Portal',
+    title: 'Website for MEP PLUS',
     description:
-      'Designed and built a dedicated internal team portal for Nama & Injaz, aimed at improving how the team communicates, shares ideas, and stays aligned. Team members can post suggestions, updates, or concerns - and if someone feels uncomfortable sharing openly, they have an anonymous option. Managers get a clear view of team sentiment and ideas, which helps build a more transparent and productive workplace. The portal also supports internal work reporting.',
+      'Designed and developed a modern corporate website for MEP PLUS to showcase its electromechanical services, completed projects, media activities, and company capabilities. The website combines a strong visual identity with a responsive layout, smooth interactions, clear navigation, and structured service information. It gives MEP PLUS a more professional online presence and makes it easier for potential clients to understand the company\'s expertise.',
     benefits: [
-      'Improved internal communication and transparency',
-      'Anonymous suggestion feature for open feedback',
-      'Helps management understand team concerns and ideas',
-      'Boosts team collaboration and engagement',
-      'Centralised platform for internal work reports',
+      'Strengthened MEP PLUS\'s professional digital presence',
+      'Clearly presents services, projects, and company capabilities',
+      'Fully responsive across desktop, tablet, and mobile devices',
+      'Improves brand credibility and customer engagement',
+      'Supports business development and new client acquisition',
     ],
-    link: 'https://team-portal-tau.vercel.app/',
-    images: ['/team.png', '/team1.png'],
+    link: 'https://mep-bice.vercel.app/',
+    images: ['/MEP.png'],
   },
   {
-    title: 'Active Directory Automations',
+    title: 'Active Directory Users Automation',
     description:
-      'Implemented a set of Active Directory automations that replaced time-consuming manual tasks with smart, reliable workflows. Weekly AD password changes - which previously required manual intervention - now happen automatically, with notifications sent to both email and Slack. Additionally, the data center AD network, which previously had to be manually powered down after hours, can now be fully managed remotely through Slack - even from a mobile device. This removes the need to be physically present for routine network control tasks.',
+      'Developed Active Directory user-management automations to reduce repetitive administrative work and improve consistency. The automated workflows support common user lifecycle activities such as account creation, organisational unit placement, security group assignment, password operations, account activation or deactivation, and employee onboarding and offboarding tasks. This reduces manual errors and allows IT administrators to manage users more efficiently.',
     benefits: [
-      'Fully automated weekly AD password rotation',
-      'Real-time notifications via email and Slack',
-      'Remote AD network on/off control via Slack',
-      'AD status checks available from mobile devices',
-      'Reduces manual workload and human error',
-      'Supports faster and more flexible IT operations',
+      'Reduces repetitive Active Directory administration',
+      'Accelerates employee onboarding and offboarding',
+      'Ensures consistent user and permission configurations',
+      'Minimises manual errors during account provisioning',
+      'Improves operational efficiency and accountability',
     ],
-    images: ['/Adauto.png'],
+    customContent: <ADAutomationCard />,
   },
   {
-    title: 'Barracuda Email Security',
+    title: 'Website for SPARK',
     description:
-      'Configured and aligned email security settings across company domains using Barracuda Email Security. This involved a full review and improvement of domain security records - SPF, DKIM, and DMARC - to close authentication gaps and improve email deliverability. The configuration work also improved overall email flow visibility and brought the company\'s email security posture in line with recognised industry frameworks such as NIST security controls.',
+      'Designed and developed a modern corporate website for SPARK – Sharara Renewable Energy, presenting the company\'s industrial supply, maintenance, safety, environmental, warehouse, chemical, and technical solutions. The website uses a bold industrial visual style, responsive layouts, smooth animations, structured capability sections, partner information, and clear calls to action to create a strong and credible online presence.',
     benefits: [
-      'Improved SPF, DKIM, and DMARC alignment across domains',
-      'Strengthened domain email authentication and protection',
-      'Better visibility into email flow and security events',
-      'Reduced risk of email spoofing and phishing attacks',
-      'Aligned with NIST-style email security best practices',
+      'Gives SPARK a strong and modern corporate identity',
+      'Clearly showcases industrial services and capabilities',
+      'Highlights sectors, business partners, and solutions',
+      'Fully responsive with smooth visual interactions',
+      'Supports customer enquiries and business development',
     ],
-    customContent: <EmailSecurityCard />,
-  },
-  {
-    title: 'New Modern Company Website',
-    description:
-      'Designed and developed a brand-new website for Nama & Injaz using modern frontend technologies - React, JavaScript, CSS, and HTML. The website features 3D-style animations, smooth section transitions, and a fully responsive layout that looks great on any device. Beyond the visual upgrade, the site gives the company a professional online presence that helps attract new clients, showcase services clearly, and reinforce the company\'s reputation as a capable and modern organisation.',
-    benefits: [
-      'Elevated company online presence and credibility',
-      'Modern UI with 3D animations and smooth transitions',
-      'Fully responsive across all screen sizes',
-      'Supports business development and client acquisition',
-      'Built with modern, maintainable web technologies',
-    ],
-    link: 'https://nama-injaz.vercel.app/',
-    images: ['/site.png'],
+    link: 'https://spark-stfl.vercel.app/',
+    images: ['/SPARK.png'],
   },
 ]
 
 /* ── Currently working data ── */
 const CURRENT_WORKS = [
   {
-    title: 'National Cybersecurity Authority Registration through Haseen',
+    title: 'AI Product – NURA',
     description:
-      'Currently working on the National Cybersecurity Authority registration through the Haseen platform. The purpose is to support NCA-related licensing and registration requirements, improve the company\'s ability to work with government projects, and strengthen the company\'s credibility with government authorities. This will help enhance Nama & Injaz\'s market reputation, build better trust with clients, and create a stronger impression when approaching government-related opportunities.',
+      'NURA is an enterprise AI assistant being developed to help employees access information, search approved company knowledge, summarise content, receive operational support, and manage internal service requests through a single conversational interface. The product will use secure Microsoft authentication and Retrieval-Augmented Generation to provide answers based on authorised organisational data rather than generic responses.\n\nNURA is also being designed for future integration with platforms such as Microsoft 365, Outlook, Barracuda, Sophos, internal documents, and ticketing systems. The product can reduce the time employees spend searching for information, improve decision-making, and position the company as an innovative provider of practical enterprise AI solutions. It also has the potential to become a scalable commercial product for external clients.',
     benefits: [
-      'Supports NCA registration readiness through Haseen',
-      'Improves eligibility for government cybersecurity opportunities',
-      'Strengthens company reputation with government authorities',
-      'Builds client trust and market credibility',
-      'Supports future cybersecurity business growth',
+      'Secure enterprise AI assistant with Microsoft authentication',
+      'Searches approved internal documents and company knowledge',
+      'Supports intelligent ticket creation and operational assistance',
+      'Planned integrations with Microsoft 365 and security platforms',
+      'Reduces information-search time and improves productivity',
+      'Can be developed into a scalable AI solution for external clients',
     ],
+    images: ['/NURA.png'],
   },
   {
-    title: 'Centralised Printer Operations and Consumables Monitoring Platform',
+    title: 'National Cybersecurity Authority Registration through Haseen',
     description:
-      'Currently working on a centralised printer operations and consumables monitoring platform for all group companies. The solution is planned as a Windows desktop agent that discovers and monitors LAN-connected printers. The agent will alert users before toner or consumables run low and will also notify them about printer issues before they affect daily work. The goal is to reduce downtime, avoid last-minute toner shortages, and improve printer operations across departments and group companies.',
+      'Managing the organisation\'s registration process through the National Cybersecurity Authority\'s Haseen platform. The work includes coordinating the required company information, cybersecurity details, authorised-account requirements, supporting documents, and internal approvals needed to complete the registration. Successful registration will strengthen the organisation\'s cybersecurity profile, improve regulatory visibility, and support future compliance and business opportunities.',
     benefits: [
-      'Discovers and monitors LAN-connected printers',
-      'Alerts users before toner or consumables run low',
-      'Notifies users about printer issues early',
-      'Reduces printer downtime and operational delays',
-      'Helps departments manage printers without central IT oversight',
-      'Can be deployed across group companies as an internal product',
+      'Supports registration with the National Cybersecurity Authority',
+      'Strengthens the organisation\'s cybersecurity profile',
+      'Improves regulatory and compliance readiness',
+      'Organises the required company and cybersecurity information',
+      'Supports credibility in future cybersecurity opportunities',
     ],
+    customContent: <HaseenCard />,
   },
 ]
 
@@ -117,14 +107,14 @@ const SectionHeader = ({ label, title, highlight, subtitle, meta }) => {
       transition={{ duration: 0.7 }}
       className="text-center mb-14"
     >
-      <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-brand-light/60 mb-4">
+      <span className="inline-flex items-center gap-2 text-[clamp(14px,1vw,16px)] font-semibold tracking-[0.2em] uppercase text-brand-light/60 mb-4">
         {label}
       </span>
-      <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+      <h2 className="text-[clamp(40px,4vw,60px)] font-black text-white mb-4 leading-tight">
         {title} <span className="gradient-text">{highlight}</span>
       </h2>
       {subtitle && (
-        <p className="text-white/40 text-sm md:text-[0.95rem] max-w-xl mx-auto leading-relaxed">
+        <p className="text-white/40 text-[clamp(16px,1.2vw,22px)] max-w-3xl mx-auto leading-relaxed">
           {subtitle}
         </p>
       )}
@@ -153,7 +143,7 @@ const WorkReport = ({ reportRef }) => {
       {/* Top separator line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-light/15 to-transparent" />
 
-      <div className="max-w-5xl mx-auto">
+      <div className="mx-auto" style={{ width: 'min(86vw, 1500px)' }}>
 
         {/* ── COMPLETED WORKS ── */}
         {/* ID used by PDF export to capture this header in isolation */}
@@ -163,7 +153,7 @@ const WorkReport = ({ reportRef }) => {
             title="Work"
             highlight="Report"
             subtitle="A detailed breakdown of projects and initiatives completed during the reporting period as part of my role at Nama & Injaz."
-            meta={['Shinaj Ahammed', 'ID 4118', 'Nama & Injaz', 'Work Report - 2026 April']}
+            meta={['Shinaj Ahammed', 'ID 4118', 'Nama & Injaz', 'Work Report - 2026 July']}
           />
         </div>
 
@@ -216,8 +206,8 @@ const WorkReport = ({ reportRef }) => {
           transition={{ duration: 0.8 }}
           className="mt-12 text-center"
         >
-          <div className="inline-block glass-card px-8 py-5">
-            <p className="text-white/30 text-xs leading-relaxed">
+          <div className="inline-block glass-card px-10 py-6">
+            <p className="text-white/30 text-[clamp(14px,1vw,16px)] leading-relaxed">
               This report covers completed projects and ongoing initiatives as part of my work at Nama &amp; Injaz.
               <br />All completed implementations are live and in active use.
             </p>

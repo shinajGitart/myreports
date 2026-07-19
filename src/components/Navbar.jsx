@@ -31,7 +31,7 @@ const Navbar = ({ onDownload, isPdfExporting }) => {
           className="nav-logo-img"
           onError={(e) => { e.target.style.display = 'none' }}
         />
-        <span className="text-sm font-semibold tracking-wide text-white/80 group-hover:text-brand-light transition-colors hidden sm:inline">
+        <span className="text-[clamp(15px,1.2vw,18px)] font-semibold tracking-wide text-white/80 group-hover:text-brand-light transition-colors hidden sm:inline">
           Shinaj Work Report
         </span>
       </button>
@@ -44,9 +44,9 @@ const Navbar = ({ onDownload, isPdfExporting }) => {
           id="nav-download-btn"
           onClick={onDownload}
           disabled={isPdfExporting}
-          className="btn-primary flex items-center gap-2 text-sm px-5 py-2"
+          className="btn-primary flex items-center gap-2 text-[clamp(14px,1vw,16px)] px-6 py-2.5"
         >
-          <Download size={14} />
+          <Download size={16} />
           {isPdfExporting ? 'Generating PDF...' : 'Download Report'}
         </button>
       </div>
@@ -83,7 +83,7 @@ const Navbar = ({ onDownload, isPdfExporting }) => {
 const NavLink = ({ icon, label, onClick }) => (
   <button
     onClick={onClick}
-    className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white/70 hover:text-brand-light rounded-full hover:bg-brand-mid/10 transition-all"
+    className="flex items-center gap-1.5 px-5 py-2.5 text-[clamp(15px,1vw,18px)] font-medium text-white/70 hover:text-brand-light rounded-full hover:bg-brand-mid/10 transition-all"
   >
     {icon}
     {label}
@@ -93,7 +93,7 @@ const NavLink = ({ icon, label, onClick }) => (
 const MobileNavLink = ({ label, onClick }) => (
   <button
     onClick={onClick}
-    className="w-full text-left px-4 py-3 text-sm font-medium text-white/80 hover:text-brand-light hover:bg-brand-mid/10 rounded-lg transition-all"
+    className="w-full text-left px-4 py-3 text-[clamp(15px,3vw,18px)] font-medium text-white/80 hover:text-brand-light hover:bg-brand-mid/10 rounded-lg transition-all"
   >
     {label}
   </button>

@@ -54,7 +54,7 @@ const WorkCard = ({ item, index, isLast, statusIcon, statusLabel, statusColor = 
       </div>
 
       {/* Card */}
-      <div className="glass-card flex-1 p-6 md:p-8 mb-10">
+      <div className="glass-card flex-1 p-[clamp(32px,4vw,64px)] mb-10">
 
         {/* Card header row */}
         <div className="flex flex-wrap items-start justify-between gap-3 mb-5">
@@ -74,7 +74,7 @@ const WorkCard = ({ item, index, isLast, statusIcon, statusLabel, statusColor = 
               {statusLabel}
             </span>
             {/* Title */}
-            <h2 className="text-xl md:text-2xl font-bold text-white leading-snug">{item.title}</h2>
+            <h2 className="text-[clamp(28px,2.2vw,40px)] font-bold text-white leading-snug">{item.title}</h2>
           </div>
 
           {/* Live link button */}
@@ -84,45 +84,48 @@ const WorkCard = ({ item, index, isLast, statusIcon, statusLabel, statusColor = 
               target="_blank"
               rel="noopener noreferrer"
               id={`project-link-${index}`}
-              className="btn-outline flex items-center gap-2 shrink-0 text-sm no-print"
+              className="btn-outline flex items-center gap-2 shrink-0 text-[clamp(14px,1vw,16px)] px-5 py-2 no-print"
             >
-              <ExternalLink size={13} />
+              <ExternalLink size={16} />
               View Live
             </a>
           )}
         </div>
 
-        {/* Description */}
-        <p className="text-white/60 leading-[1.8] text-sm md:text-[0.95rem] mb-7">
-          {item.description}
-        </p>
+        {/* Description — supports multi-paragraph text split by \n\n */}
+        <div className="mb-8">
+          {item.description.split('\n\n').map((para, pi) => (
+            <p key={pi} className="text-white/70 text-[clamp(17px,1.15vw,21px)] leading-[1.75] mb-4 last:mb-0">
+              {para}
+            </p>
+          ))}
+        </div>
 
         {/* Images */}
         {item.images && item.images.length > 0 && (
-          <div className={`grid gap-4 mb-7 ${item.images.length > 1 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'}`}>
+          <div className={`grid gap-6 mb-8 ${item.images.length > 1 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
             {item.images.map((src, i) => (
-              <div key={i} className="overflow-hidden rounded-xl border border-brand-base/20 bg-brand-dark/40">
+              <div key={i} className="image-wrapper bg-brand-dark/40">
                 <img
                   src={src}
-                  alt={`${item.title} - screenshot ${i + 1}`}
-                  className="report-img"
+                  alt={`${item.title} screenshot ${i + 1}`}
                 />
               </div>
             ))}
           </div>
         )}
 
-        {/* Custom content (email security card) */}
+        {/* Custom content (inline visual component) */}
         {item.customContent && (
           <div className="mb-7">{item.customContent}</div>
         )}
 
         {/* Key Benefits */}
-        <div className="pt-4 border-t border-brand-light/8">
-          <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light/40 mb-4">
+        <div className="pt-6 border-t border-brand-light/10 mt-2">
+          <p className="text-[clamp(12px,0.9vw,14px)] font-semibold tracking-[0.18em] uppercase text-brand-light/50 mb-5">
             Key Benefits
           </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
             {item.benefits.map((b, i) => (
               <motion.li
                 key={i}
@@ -130,9 +133,9 @@ const WorkCard = ({ item, index, isLast, statusIcon, statusLabel, statusColor = 
                 custom={i}
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
-                className="flex items-start gap-2.5 text-sm text-white/65 leading-relaxed"
+                className="flex items-start gap-3 text-[clamp(15px,1vw,18px)] text-white/75 leading-[1.6]"
               >
-                <CheckCircle2 size={14} className="text-brand-light shrink-0 mt-0.5" />
+                <CheckCircle2 size={18} className="text-brand-light shrink-0 mt-[2px]" />
                 {b}
               </motion.li>
             ))}

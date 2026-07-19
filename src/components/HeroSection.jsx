@@ -61,7 +61,7 @@ const HeroSection = ({ onShowReport }) => {
           initial={{ opacity: 0, letterSpacing: '0.4em' }}
           animate={{ opacity: 1, letterSpacing: '0.3em' }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-xs font-semibold tracking-[0.3em] uppercase text-brand-light/70 mb-5"
+          className="text-[clamp(12px,1vw,16px)] font-semibold tracking-[0.3em] uppercase text-brand-light/70 mb-5"
         >
           WORK REPORT
         </motion.p>
@@ -71,7 +71,7 @@ const HeroSection = ({ onShowReport }) => {
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none mb-6"
+          className="text-[clamp(50px,6vw,90px)] font-black tracking-tight leading-none mb-6"
         >
           <span className="gradient-text">Shinaj</span>
           <span className="text-white"> Ahammed</span>
@@ -92,9 +92,9 @@ const HeroSection = ({ onShowReport }) => {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="flex flex-col items-center gap-2 mb-10"
         >
-          <p className="text-white/50 text-sm tracking-wide">Employee ID: 4118</p>
-          <p className="text-brand-light/80 text-sm font-medium tracking-wide">Nama &amp; Injaz</p>
-          <p className="text-white/35 text-xs tracking-widest uppercase mt-1">Work Report - 2026 April</p>
+          <p className="text-white/50 text-[clamp(15px,1.1vw,18px)] tracking-wide">Employee ID: 4118</p>
+          <p className="text-brand-light/80 text-[clamp(15px,1.1vw,18px)] font-medium tracking-wide">Nama &amp; Injaz</p>
+          <p className="text-white/35 text-[clamp(12px,0.9vw,14px)] tracking-widest uppercase mt-1">Work Report - 2026 July</p>
         </motion.div>
 
         {/* CTA */}
