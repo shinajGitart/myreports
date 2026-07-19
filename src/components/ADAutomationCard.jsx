@@ -45,7 +45,7 @@ const ADAutomationCard = () => {
               </div>
               <div>
                 <h5 className="text-white text-lg font-medium">Shinaj Ahammed</h5>
-                <p className="text-white/50 text-sm">New Employee Onboarding</p>
+                <p className="text-white/50 text-sm">Employee Informations</p>
               </div>
               <div className="ml-auto">
                 <span className="px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full text-xs font-medium flex items-center gap-1.5">
