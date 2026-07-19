@@ -14,12 +14,13 @@
   --color-base: #2F8A81;
   --color-light: #59B6AD;
   --glow-color: rgba(89, 182, 173, 0.35);
+  --navbar-height: 80px;
 }
 
 /* ── Smooth scroll ── */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px; /* offset for fixed navbar */
+  scroll-padding-top: var(--navbar-height); /* offset for fixed navbar */
 }
 
 /* ── Body ── */
@@ -210,13 +211,13 @@ body {
 }
 
 .timeline-dot {
-  width: clamp(48px, 4vw, 64px);
-  height: clamp(48px, 4vw, 64px);
+  width: clamp(40px, 4vw, 56px);
+  height: clamp(40px, 4vw, 56px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(14px, 1.2vw, 18px);
+  font-size: clamp(13px, 1.1vw, 16px);
   font-weight: 700;
   color: #fff;
   flex-shrink: 0;
@@ -262,7 +263,7 @@ body {
    HERO LOGO
 ───────────────────────────────────── */
 .hero-logo {
-  height: clamp(70px, 8vw, 110px);
+  height: clamp(56px, 6vw, 90px);
   width: auto;
   max-width: 220px;
   object-fit: contain;
@@ -332,7 +333,7 @@ body {
   right: 0;
   z-index: 1000;
   padding: 0 2rem;
-  height: clamp(70px, 6vw, 90px);
+  height: var(--navbar-height);
   display: flex;
   align-items: center;
   justify-content: space-between;

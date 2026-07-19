@@ -15,7 +15,7 @@ const HeroSection = ({ onShowReport }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center mesh-bg grid-overlay overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-[var(--navbar-height)] mesh-bg grid-overlay overflow-hidden"
     >
       {/* Ambient blobs */}
       <div className="absolute top-1/3 -left-40 w-[500px] h-[500px] rounded-full bg-brand-mid/8 blur-[100px] pointer-events-none" />
@@ -71,7 +71,7 @@ const HeroSection = ({ onShowReport }) => {
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-[clamp(50px,6vw,90px)] font-black tracking-tight leading-none mb-6"
+          className="text-[clamp(40px,5vw,72px)] font-black tracking-tight leading-none mb-6"
         >
           <span className="gradient-text">Shinaj</span>
           <span className="text-white"> Ahammed</span>
@@ -92,9 +92,9 @@ const HeroSection = ({ onShowReport }) => {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="flex flex-col items-center gap-2 mb-10"
         >
-          <p className="text-white/50 text-[clamp(15px,1.1vw,18px)] tracking-wide">Employee ID: 4118</p>
-          <p className="text-brand-light/80 text-[clamp(15px,1.1vw,18px)] font-medium tracking-wide">Nama &amp; Injaz</p>
-          <p className="text-white/35 text-[clamp(12px,0.9vw,14px)] tracking-widest uppercase mt-1">Work Report - 2026 July</p>
+          <p className="text-white/50 text-sm sm:text-base tracking-wide">Employee ID: 4118</p>
+          <p className="text-brand-light/80 text-sm sm:text-base font-medium tracking-wide">Nama &amp; Injaz</p>
+          <p className="text-white/35 text-xs sm:text-sm tracking-widest uppercase mt-1">Work Report - 2026 July</p>
         </motion.div>
 
         {/* CTA */}

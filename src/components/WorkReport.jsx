@@ -110,11 +110,11 @@ const SectionHeader = ({ label, title, highlight, subtitle, meta }) => {
       <span className="inline-flex items-center gap-2 text-[clamp(14px,1vw,16px)] font-semibold tracking-[0.2em] uppercase text-brand-light/60 mb-4">
         {label}
       </span>
-      <h2 className="text-[clamp(40px,4vw,60px)] font-black text-white mb-4 leading-tight">
+      <h2 className="text-[clamp(32px,3.5vw,52px)] font-black text-white mb-4 leading-tight">
         {title} <span className="gradient-text">{highlight}</span>
       </h2>
       {subtitle && (
-        <p className="text-white/40 text-[clamp(16px,1.2vw,22px)] max-w-3xl mx-auto leading-relaxed">
+        <p className="text-white/40 text-[clamp(15px,1.1vw,18px)] max-w-3xl mx-auto leading-relaxed">
           {subtitle}
         </p>
       )}
@@ -143,7 +143,7 @@ const WorkReport = ({ reportRef }) => {
       {/* Top separator line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-light/15 to-transparent" />
 
-      <div className="mx-auto" style={{ width: 'min(86vw, 1500px)' }}>
+      <div className="w-[92%] max-w-7xl mx-auto">
 
         {/* ── COMPLETED WORKS ── */}
         {/* ID used by PDF export to capture this header in isolation */}

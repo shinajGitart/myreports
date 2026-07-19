@@ -54,7 +54,7 @@ const WorkCard = ({ item, index, isLast, statusIcon, statusLabel, statusColor = 
       </div>
 
       {/* Card */}
-      <div className="glass-card flex-1 p-[clamp(32px,4vw,64px)] mb-10">
+      <div className="glass-card flex-1 p-6 sm:p-8 lg:p-10 mb-10">
 
         {/* Card header row */}
         <div className="flex flex-wrap items-start justify-between gap-3 mb-5">
@@ -74,7 +74,7 @@ const WorkCard = ({ item, index, isLast, statusIcon, statusLabel, statusColor = 
               {statusLabel}
             </span>
             {/* Title */}
-            <h2 className="text-[clamp(28px,2.2vw,40px)] font-bold text-white leading-snug">{item.title}</h2>
+            <h2 className="text-[clamp(22px,2vw,32px)] font-bold text-white leading-snug">{item.title}</h2>
           </div>
 
           {/* Live link button */}
@@ -95,7 +95,7 @@ const WorkCard = ({ item, index, isLast, statusIcon, statusLabel, statusColor = 
         {/* Description — supports multi-paragraph text split by \n\n */}
         <div className="mb-8">
           {item.description.split('\n\n').map((para, pi) => (
-            <p key={pi} className="text-white/70 text-[clamp(17px,1.15vw,21px)] leading-[1.75] mb-4 last:mb-0">
+            <p key={pi} className="text-white/70 text-[clamp(15px,1vw,18px)] leading-[1.75] mb-4 last:mb-0">
               {para}
             </p>
           ))}
